@@ -53,6 +53,7 @@ class PracticeWindow(tk.Frame):
     def stop_practice(self):
         self.running = False
         self.cancel_timer()
+        self.on_stop()
         elapsed = time.monotonic() - self.start_time
         self.button.configure(text="start practice")
         self.stats_label.configure(text=f"You practiced {self.count} notes for {elapsed/60:.1f} minutes")
@@ -64,6 +65,9 @@ class PracticeWindow(tk.Frame):
 
     def on_start(self):
         """Prepare a new session, e.g. read settings."""
+
+    def on_stop(self):
+        """Clean up after a session, e.g. re-enable settings."""
 
     def show_next(self):
         """Show the next note to the user."""
