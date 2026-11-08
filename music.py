@@ -5,7 +5,10 @@ FLATS = ["A♭", "B♭", "D♭", "E♭", "G♭"]
 CHROMATIC = NATURAL + SHARPS
 CHROMATIC.sort()
 
-TUNING = [["E"], ["A"], ["D"], ["G"], ["B"], ["E"]]
+E_STANDARD = [["E"], ["A"], ["D"], ["G"], ["B"], ["E"]]
+D_STANDARD = [["D"], ["G"], ["C"], ["F"], ["A"], ["D"]]
+
+TUNING = E_STANDARD.copy()
 
 for i in range(len(TUNING)):
     note = TUNING[i][0]
