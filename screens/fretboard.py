@@ -93,3 +93,6 @@ class FretboardScreen(PracticeWindow):
                     b.configure(text="◉", font=("Arial", 12))
 
             self.frets.append(row)
+
+        for i in range(len(self.frets)):
+            self.frets[i][0].configure(text=TUNING[i][0])
